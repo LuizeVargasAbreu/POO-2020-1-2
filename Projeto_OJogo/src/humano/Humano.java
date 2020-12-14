@@ -1,21 +1,19 @@
 package humano;
 
-import java.util.ArrayList;
-import java.util.Random;
 import projeto_ojogo.Personagem;
 
 public abstract class Humano extends Personagem {
 
-    protected int inteligencia;
-    protected int velocidade;
-    protected int equipamentos;
+    private int inteligencia;               //todos os atributos estavam como protected, mas pra ser um bom encapsulamento deveriam ser private
+    private int velocidade;
+    private int equipamentos;
 
     public Humano(int inteligencia, int velocidade, int equipamentos) {
         this.inteligencia = inteligencia;
         this.velocidade = velocidade;
         this.equipamentos = equipamentos;
     }
-
+    
     public int getInteligencia() {
         return inteligencia;
     }

@@ -90,10 +90,10 @@ public class Jogo {
 
                 switch (poderes) {
                     case 0://INTELIGENCIA X FORCA
+                        diferenca = Math.abs(humano.get(i).getInteligencia() - orc.get(i).getForca());
                         if (humano.get(i).getInteligencia() > orc.get(i).getForca()) {
                             System.out.println("\tInteligência: " + humano.get(i).getInteligencia() + "\t\tX\tForça: " + orc.get(i).getForca());
-
-                            diferenca = humano.get(i).getInteligencia() - orc.get(i).getForca();
+                            
                             ((Personagem) humano.get(i)).setVida(humano.get(i).ganharVida(diferenca));
                             ((Personagem) orc.get(i)).setVida(orc.get(i).perderVida(diferenca));
 
@@ -104,7 +104,6 @@ public class Jogo {
                         } else if (orc.get(i).getForca() > humano.get(i).getInteligencia()) {
                             System.out.println("\tInteligência: " + humano.get(i).getInteligencia() + "\t\tX\tForça: " + orc.get(i).getForca());
 
-                            diferenca = orc.get(i).getForca() - humano.get(i).getInteligencia();
                             ((Personagem) orc.get(i)).setVida(orc.get(i).ganharVida(diferenca));
                             ((Personagem) humano.get(i)).setVida(humano.get(i).perderVida(diferenca));
 
@@ -120,10 +119,10 @@ public class Jogo {
                         break;
 
                     case 1://VELOCIDADE X HABILIDADE                                                                     //case do segundo poder
+                        diferenca = Math.abs(humano.get(i).getVelocidade() - orc.get(i).getHabilidade());
                         if (humano.get(i).getVelocidade() > orc.get(i).getHabilidade()) {
                             System.out.println("\tVelocidade: " + humano.get(i).getVelocidade() + "\t\tX\tHabilidade: " + orc.get(i).getHabilidade());
 
-                            diferenca = humano.get(i).getVelocidade() - orc.get(i).getHabilidade();
                             ((Personagem) humano.get(i)).setVida(humano.get(i).ganharVida(diferenca));
                             ((Personagem) orc.get(i)).setVida(orc.get(i).perderVida(diferenca));
 
@@ -134,7 +133,6 @@ public class Jogo {
                         } else if (orc.get(i).getHabilidade() > humano.get(i).getVelocidade()) {
                             System.out.println("\tVelocidade: " + humano.get(i).getVelocidade() + "\t\tX\tHabilidade: " + orc.get(i).getHabilidade());
 
-                            diferenca = orc.get(i).getHabilidade() - humano.get(i).getVelocidade();
                             ((Personagem) orc.get(i)).setVida(orc.get(i).ganharVida(diferenca));
                             ((Personagem) humano.get(i)).setVida(humano.get(i).perderVida(diferenca));
 
@@ -150,10 +148,10 @@ public class Jogo {
                         break;
 
                     case 2://EQUIPAMENTOS X AGILIDADE
+                        diferenca = Math.abs(humano.get(i).getEquipamentos() - orc.get(i).getAgilidade());
                         if (humano.get(i).getEquipamentos() > orc.get(i).getAgilidade()) {
                             System.out.println("\tEquipamentos: " + humano.get(i).getEquipamentos() + "\t\tX\tAgilidade: " + orc.get(i).getAgilidade());
 
-                            diferenca = humano.get(i).getEquipamentos() - orc.get(i).getAgilidade();
                             ((Personagem) humano.get(i)).setVida(humano.get(i).ganharVida(diferenca));
                             ((Personagem) orc.get(i)).setVida(orc.get(i).perderVida(diferenca));
 
@@ -164,7 +162,6 @@ public class Jogo {
                         } else if (orc.get(i).getAgilidade() > humano.get(i).getEquipamentos()) {
                             System.out.println("\tEquipamentos: " + humano.get(i).getEquipamentos() + "\t\tX\tAgilidade: " + orc.get(i).getAgilidade());
 
-                            diferenca = orc.get(i).getAgilidade() - humano.get(i).getEquipamentos();
                             ((Personagem) orc.get(i)).setVida(orc.get(i).ganharVida(diferenca));
                             ((Personagem) humano.get(i)).setVida(humano.get(i).perderVida(diferenca));
 

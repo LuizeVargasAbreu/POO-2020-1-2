@@ -1,14 +1,12 @@
 package orc;
 
-import java.util.ArrayList;
-import java.util.Random;
 import projeto_ojogo.Personagem;
 
 public abstract class Orc extends Personagem {
 
-    protected int forca;
-    protected int habilidade;
-    protected int agilidade;
+    private int forca;            //todos os atributos estavam como protected, mas pra ser um bom encapsulamento deveriam ser private
+    private int habilidade;
+    private int agilidade;
 
     public Orc(int forca, int habilidade, int agilidade) {
         this.forca = forca;
